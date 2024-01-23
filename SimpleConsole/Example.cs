@@ -27,7 +27,7 @@ namespace SimpleConsole
             var fistStep    = Helper.ExecuteThenPointTo<int>(DisplayMenu, GetValidInputFromConsole);
             var secondStep  = Helper.ExecuteThenPointTo(fistStep, TakeActionBasedOnInput);
             var finalStep   = Helper.ExecuteThenPointTo(secondStep, GoBackToMenuOrEnd);
-            finalStep();
+            finalStep.Invoke();
         }
         #region private method
         private void DisplayMenu()
